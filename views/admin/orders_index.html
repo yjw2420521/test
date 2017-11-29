@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block main%} 
+<ol class="breadcrumb">
+  <li><a href="/">管理首页</a></li>
+  <li><span>用户首页</a></span></li>
+</ol>
+
+<h3> 用户列表 </h3>
+<table class="table table-hover table-striped">
+    <tr>
+        <th>用户名</th>
+        <th>商品名</th>
+        <th>订单编号</th>
+        <th>地址</th>
+        <th>手机号</th>
+        <th>qq号</th>
+        <th>总计</th>
+        <th>操作</th>
+    </tr>
+    {% for order in orders %}
+    <tr>
+        <td>{{ order.username }}</td>
+        <td>{{ order.gname }}</td>
+        <td>{{ order.orderid }}</td>
+        <td>{{ order.adress }}</td>
+        <td>{{ order.pnum }}</td>
+        <td>{{ order.qnum }}</td>
+        <td>{{ order.totalprice }}</td>
+        <td>无</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

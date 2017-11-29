@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block main%} 
+<ol class="breadcrumb">
+  <li><a href="/admin">管理首页</a></li>
+  <li><span>商品首页</a></span></li>
+</ol>
+
+<h3> 商品管理 </h3>
+<table class="table table-hover table-striped">
+    <tr>
+        <th>商品名</th>
+        <th>价格</th>
+        <th>数量</th>
+        <th>创建日期</th>
+        <th>进行的操作</th>
+    </tr>
+    {% for good in goods %}
+    <tr>
+        <td>{{ good.name }}</td>
+        <td>{{ good.price }}</td>
+        <td>{{ good.num }}</td>
+        <td>{{ good.creatData }}</td>
+        <td><a  href="goods/del?id={{ good._id.toString()}}">删除</a>/<a  href="goods/xiugai?id={{ good._id.toString() }}">修改</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

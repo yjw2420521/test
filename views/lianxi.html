@@ -1,0 +1,930 @@
+{% extends 'index.html' %}
+{% block main%} 
+<div id="test">
+   
+    <img src="public\img\qipao.png" alt="" width="100x" height="100px" style="margin-bottom:-100px;">
+     <span style="color:black;margin-left:25px;z-index:10000;margin-top:20px;">买不买!</span>
+    <img src="public\img\huadong.jpg" alt="" width="200px" height="250px">
+</div>   
+    <div class="mid" style="width:1350px;">
+    <div class="midleft" style="float:left;">
+          <div class="nav1">
+            <div class="list-group" style="width:200px;margin-left: 105px; border:#ffad52;">
+                    <ul role="tablist" class="tablelist">   
+                        <li role="presentation" class="active"><a href="#myabout" aria-controls="myabout" role="tab" data-toggle="tab"><button type="button" class="list-group-item" style="border:1px solid #ffad52;">分类总览</button></a></li>
+                        <li role="presentation"><a href="#shouban"  aria-controls="shouban" role="tab" data-toggle="tab"><button type="button" class="list-group-item">手办专区</button></a></li>
+                        <li role="presentation"><a href="#model"  aria-controls="model" role="tab" data-toggle="tab"><button type="button" class="list-group-item">模型专区</button></a></li>
+                        <li role="presentation"><a href="#hat"  aria-controls="hat" role="tab" data-toggle="tab"><button type="button" class="list-group-item">服饰鞋帽</button></a></li>
+                        <li role="presentation"><a href="#life"  aria-controls="life" role="tab" data-toggle="tab"><button type="button" class="list-group-item">生活娱乐</button></a></li>
+                        <li role="presentation"><a href="#maorong"  aria-controls="maorong" role="tab" data-toggle="tab"><button type="button" class="list-group-item">毛绒玩具</button></a></li>
+                        <li role="presentation"><a href="#guajian"  aria-controls="guajian" role="tab" data-toggle="tab"><button type="button" class="list-group-item">精品挂件</button></a></li>
+                        <li role="presentation"><a href="#xiangbao"  aria-controls="xiangbao" role="tab" data-toggle="tab"><button type="button" class="list-group-item">卡通箱包</button></a></li>
+                        <li role="presentation"><a href="#bukuang"  aria-controls="bukuang" role="tab" data-toggle="tab"><button type="button" class="list-group-item">预售补款</button></a></li>
+                        <li><button type="button" class="list-group-item" style="height:170px;"></button></li>
+                    </ul>
+             </div>
+          </div>
+     </div>
+   <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="myabout">
+    <div class="ii">
+     <!--主页面框架-->
+        <div class="midright" style="width:970px; float:left;margin:20px 20px;">
+             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            <!--<li data-target="#carousel-example-generic" data-slide-to="3"></li>-->
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                            <img src="public\img\lunbo.png" alt="...">
+                            <div class="carousel-caption">
+                            </div>
+                            </div>
+                            <div class="item">
+                            <img src="public\img\lunbo2.png" alt="...">
+                            <div class="carousel-caption">
+                            </div>
+                            </div>
+                             <div class="item">
+                            <img src="public\img\lunbo.png" alt="...">
+                            <div class="carousel-caption">
+                            </div> 
+                            </div>
+                            <!--<div class="item">
+                            <img src="" alt="...">
+                            <div class="carousel-caption">
+                            </div>
+                            <span class="span4" style="left:160px;top:180px;font-size:80px;color:white;">Welcome!</span>
+                            </div>-->
+                             <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div> 
+        <div class="midbut">
+            <img src="public\img\midbut.jpg" alt="">
+            <img src="public\img\midbut.jpg" alt="">
+            <img src="public\img\midbut.jpg" alt="">
+            <img src="public\img\midbut.jpg" alt="">
+        </div>     
+    </div>
+    <!--特价专区-->
+    <div class="product"> 
+         <div class="prodtop">
+                 <span>限时特价</span>
+                 <a href="">更多 ></a>
+         </div>
+         <div class="prodbut">
+             <a href="/goods?gid=100"><img src="public\img\sp\sp1.jpg" alt=""></a>
+             <a href="/goods?gid=101"><img src="public\img\sp2.jpg" alt=""></a>
+             <img src="public\img\sp3.jpg" alt="">
+             <img src="public\img\sp4.jpg" alt="">
+             <img src="public\img\sp5.jpg" alt="">
+             <img src="public\img\sp6.jpg" alt="">
+             <img src="public\img\sp7.jpg" alt="">
+             <img src="public\img\sp8.jpg" alt="">
+         </div>
+    </div>
+    <div class="product"> 
+         <div class="prodtop">
+                 <span>模型专区</span>
+                 <a href="">更多 ></a>
+         </div>
+         <div class="prodbut">
+            <a href="/" id="tejia3" > <img id="100" src="public\img\sp9.jpg" alt=""></a>
+             <img id="tejia4" src="public\img\sp10.jpg" alt="">
+             <img src="public\img\sp11.jpg" alt="">
+             <img src="public\img\sp12.jpg" alt="">
+             <img src="public\img\sp13.jpg" alt="">
+             <img src="public\img\sp14.jpg" alt="">
+             <img src="public\img\sp15.jpg" alt="">
+             <img src="public\img\sp16.jpg" alt="">
+         </div>
+    </div>
+    <div class="product"> 
+         <div class="prodtop">
+                 <span>手办专区</span>
+                 <a href="">更多 ></a>
+         </div>
+         <div class="prodbut">
+             <img src="public\img\mx1.jpg" alt="">
+             <img src="public\img\mx2.jpg" alt="">
+             <img src="public\img\mx3.jpg" alt="">
+             <img src="public\img\mx4.jpg" alt="">
+             <img src="public\img\mx5.jpg" alt="">
+             <img src="public\img\mx6.jpg" alt="">
+             <img src="public\img\mx7.jpg" alt="">
+             <img src="public\img\mx8.jpg" alt="">
+         </div>
+    </div>
+    <div class="product"> 
+         <div class="prodtop">
+                 <span>毛绒玩具</span>
+                 <a href="">更多 ></a>
+         </div>
+         <div class="prodbut">
+             <img src="public\img\gz1.jpg" alt="">
+             <img src="public\img\gz2.jpg" alt="">
+             <img src="public\img\gz3.jpg" alt="">
+             <img src="public\img\gz2.jpg" alt="">
+         </div>
+    </div>
+    <div class="product"> 
+         <div class="prodtop">
+                 <span>服饰鞋帽</span>
+                 <a href="">更多 ></a>
+         </div>
+         <div class="prodbut">
+             <img src="public\img\xm1.jpg" alt="">
+             <img src="public\img\xm2.jpg" alt="">
+             <img src="public\img\xm3.jpg" alt="">
+             <img src="public\img\xm4.jpg" alt="">
+             <img src="public\img\xm5.jpg" alt="">
+         </div>
+    </div>
+    <div class="product"> 
+         <div class="prodtop">
+                 <span>卡通箱包</span>
+                 <a href="">更多 ></a>
+         </div>
+         <div class="prodbut">
+             <img src="public\img\xb1.jpg" alt="">
+             <img src="public\img\xb2.jpg" alt="">
+             <img src="public\img\xb3.jpg" alt="">
+             <img src="public\img\xb4.jpg" alt="">
+             <img src="public\img\xb5.jpg" alt="">
+         </div>
+    </div>
+    <div class="product"> 
+         <div class="prodtop">
+                 <span>精品挂饰</span>
+                 <a href="">更多 ></a>
+         </div>
+         <div class="prodbut">
+             <img src="public\img\gs1.jpg" alt="">
+             <img src="public\img\gs2.jpg" alt="">
+             <img src="public\img\gs3.jpg" alt="">
+             <img src="public\img\gs4.jpg" alt="">
+             <img src="public\img\gs1.jpg" alt="">
+         </div>
+    </div>
+    <div class="product"> 
+         <div class="prodtop">
+                 <span>配件工具</span>
+                 <a href="">更多 ></a>
+         </div>
+         <div class="prodbut">
+             <img src="public\img\gz3.jpg" alt="">
+             <img src="public\img\gz2.jpg" alt="">
+             <img src="public\img\gz3.jpg" alt="">
+             <img src="public\img\gz4.jpg" alt="">
+         </div>
+    </div>
+    <!--<div class="bottum">
+        <div class="bottop">
+              <div class="bottopright">
+                <figure>
+                            <figcaption>
+                                <span style="margin:0 80px;font-size:10px">扫二维码</span>
+                            </figcaption>
+                            <img src="img\mobile_weixin.png" alt="谷歌的图片">
+                            <figcaption>
+                                <span style="margin:0 80px;font-size:10px">扫二维码</span>
+                            </figcaption>
+                            </figure>
+                <figure>
+                            <figcaption>
+                                <span style="margin:0 80px;font-size:10px">扫二维码</span>
+                            </figcaption>
+                            <img src="img\mobile_weixin.png" alt="谷歌的图片">
+                            <figcaption>
+                                <span style="margin:0 80px;font-size:10px">扫二维码</span>
+                            </figcaption>
+                            </figure>
+
+            </div>
+            <div class="bottopleft">
+                <div class="bottoplefttop">
+                     <img src="img\7tian.png" alt="">
+                     <img src="img\15tian.png" alt="">
+                     <img src="img\100.png" alt="" style="border:none;">
+                </div>
+                <div class="bottopleftbot">
+                      <ul>
+                          <li><strong>购物指南</strong></li>
+                          <li>购物常见问题</li>
+                          <li>订单状态</li>
+                          <li>购物流程</li>
+                      </ul>
+                      <ul>
+                          <li><strong>购物指南</strong></li>
+                          <li>购物常见问题</li>
+                          <li>订单状态</li>
+                          <li>购物流程</li>
+                      </ul>
+                      <ul>
+                          <li><strong>购物指南</strong></li>
+                          <li>购物常见问题</li>
+                          <li>订单状态</li>
+                          <li>购物流程</li>
+                      </ul>
+                      <ul>
+                          <li><strong>购物指南</strong></li>
+                          <li>购物常见问题</li>
+                          <li>订单状态</li>
+                          <li>购物流程</li>
+                      </ul>
+                      <div class="phone">
+                           <span class="glyphicon glyphicon-phone-alt">000-000000</span>
+                           <span style="background:green;float:none; color:white;padding:10px 20px;font-size:18px;border-radius:5px;">联系客服 QQ</span>
+                      </div>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+     <div class="word">
+         <span>免责条款 | 隐私保护 | 联系我们 | 加入我们 | 公司简介 | 媒体报道 </span></n>
+         <span>友情链接： 漫社区 | 有妖气 | 漫域 | 技术宅 | 78动漫 | 新浪动漫 | 快递查询 </span>
+         <span>© 2013-2016 北京海拓天行科技有限公司 manluotuo.com 保留一切权利. 京ICP备14003085</span>
+     </div>-->
+  </div>
+  </div>
+<div role="tabpanel" class="tab-pane" id="shouban">
+                       <div class="zhenwen">
+                            <div class="zwtop">
+                               <div class="zwtitle">
+                                   <span>手办专区</span>
+                               </div>
+                               <div class="zwchoose">
+                                   
+                                       <strong style="float:left;margin-left:50px;margin-top:20px;">品牌：</strong>
+                                       <ul>
+                                       <li><span>全部</span></li>
+                                       <li>星球大战</li>
+                                       <li>高达</li>
+                                       <li>圣斗士星矢</li>
+                                       <li>Love Live</li>
+                                       <li>魔兽世界</li>
+                                       <li>七龙珠</li>
+                                       <li>银魂</li>
+                                       <li>复仇者联盟</li>
+                                       <li>漫威</li>
+                                       <li>超能陆战队</li>
+                                       <li>海贼王</li>
+                                       <li>钢铁侠</li>
+                                       <li>初音未来</li>
+                                       <li>出包女王</li>
+                                       <li>约会大作战</li>
+                                       <li>EVA</li>
+                                       <li>火影忍者</li>
+                                       <li>哆唻A梦</li>
+                                   </ul>
+                               </div>
+                            </div>
+                            <div class="zwmain">
+                                <div class="zwmaintop">
+                                    <ul>
+                                        <strong style="margin-left:20px;margin-top:30px;">排序方式：</strong>
+                                        <li>按上架时间</li>
+                                        <li>价格由低到高</li>
+                                        <li>按更新时间</li>
+                                    </ul>
+                                </div>
+                                <div class="zwmain1">
+                                    <div class="img1">
+                                        <img src="public\img\sp3.jpg" alt="">
+                                    </div>
+                                     <div class="img1">
+                                        <img src="public\img\sp4.jpg" alt="">
+                                    </div>
+                                     <div class="img1">
+                                         <img src="public\img\sp5.jpg" alt="">
+                                    </div>
+                                     <div class="img1">
+                                        <img src="public\img\sp6.jpg" alt="">
+                                    </div>
+                                     <div class="img1">
+                                         <img src="public\img\sp7.jpg" alt="">
+                                    </div>
+                                     <div class="img1">
+                                         <img src="public\img\sp15.jpg" alt="">
+                                    </div>
+                                     <div class="img1">
+                                         <img src="public\img\sp3.jpg" alt="">
+                                    </div>
+                                     <div class="img1">
+                                         <img src="public\img\sp10.jpg" alt="">
+                                    </div>
+                                    <div class="img1">
+                                         <img src="public\img\sp11.jpg" alt="">
+                                    </div>
+                                    <div class="img1">
+                                        <img src="public\img\sp12.jpg" alt="">
+                                    </div>
+                                    <div class="img1">
+                                         <img src="public\img\sp13.jpg" alt="">
+                                    </div>
+                                    <div class="img1">
+                                         <img src="public\img\sp14.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="fenye1" id="div1"></div>
+                            </div>
+                       </div>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="model">
+                       <div class="zhenwen">
+                            <div class="zwtop">
+                               <div class="zwtitle">
+                                   <span>模型专区</span>
+                               </div>
+                               <div class="zwchoose">
+                                   
+                                       <strong style="float:left;margin-left:50px;margin-top:20px;">品牌：</strong>
+                                       <ul>
+                                       <li><span>全部</span></li>
+                                       <li>星球大战</li>
+                                       <li>高达</li>
+                                       <li>圣斗士星矢</li>
+                                       <li>Love Live</li>
+                                       <li>魔兽世界</li>
+                                       <li>七龙珠</li>
+                                       <li>银魂</li>
+                                       <li>复仇者联盟</li>
+                                       <li>漫威</li>
+                                       <li>超能陆战队</li>
+                                       <li>海贼王</li>
+                                       <li>钢铁侠</li>
+                                       <li>初音未来</li>
+                                       <li>出包女王</li>
+                                       <li>约会大作战</li>
+                                       <li>EVA</li>
+                                       <li>火影忍者</li>
+                                       <li>哆唻A梦</li>
+                                   </ul>
+                               </div>
+                            </div>
+                            <div class="zwmain">
+                                <div class="zwmaintop">
+                                    <ul>
+                                        <strong style="margin-left:20px;margin-top:30px;">排序方式：</strong>
+                                        <li>按上架时间</li>
+                                        <li>价格由低到高</li>
+                                        <li>按更新时间</li>
+                                    </ul>
+                                </div>
+                                <div class="zwmain1">
+                                    <div class="img1">
+                                         <img src="public\img\mx3.jpg" alt="">
+                                    </div>
+                                     <div class="img1">
+                                        <img src="public\img\mx2.jpg" alt="">
+                                    </div>
+                                     <div class="img1">
+                                          <img src="public\img\mx4.jpg" alt="">
+                                    </div>
+                                     <div class="img1">
+                                         <img src="public\img\mx5.jpg" alt="">
+                                    </div>
+                                     <div class="img1">
+                                         <img src="public\img\mx6.jpg" alt="">
+                                    </div>
+                                     <div class="img1">
+                                         <img src="public\img\mx7.jpg" alt="">
+                                    </div>
+                                     <div class="img1">
+                                        <img src="public\img\mx5.jpg" alt="">
+                                    </div>
+                                     <div class="img1">
+                                        <img src="public\img\mx8.jpg" alt="">
+                                    </div>
+                                    <div class="img1">
+                                        <img src="public\img\mx9.jpg" alt="">
+                                    </div>
+                                    <div class="img1">
+                                         <img src="public\img\mx7.jpg" alt="">
+                                    </div>
+                                    <div class="img1">
+                                       <img src="public\img\mx3.jpg" alt="">
+                                    </div>
+                                    <div class="img1">
+                                       <img src="public\img\mx3.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="fenye1" id="div1"></div>
+                            </div>
+                       </div>
+           </div>
+  <div role="tabpanel" class="tab-pane" id="hat">
+                       <div class="zhenwen">
+                           <div class="zwtop">
+                               <div class="zwtitle">
+                                   <span>鞋帽专区</span>
+                               </div>
+                               <div class="zwchoose">
+                                   
+                                       <strong style="float:left;margin-left:50px;margin-top:20px;">品牌：</strong>
+                                       <ul>
+                                       <li><span>全部</span></li>
+                                       <li>星球大战</li>
+                                       <li>高达</li>
+                                       <li>圣斗士星矢</li>
+                                       <li>Love Live</li>
+                                       <li>魔兽世界</li>
+                                       <li>七龙珠</li>
+                                       <li>银魂</li>
+                                       <li>复仇者联盟</li>
+                                       <li>漫威</li>
+                                       <li>超能陆战队</li>
+                                       <li>海贼王</li>
+                                       <li>钢铁侠</li>
+                                       <li>初音未来</li>
+                                       <li>出包女王</li>
+                                       <li>约会大作战</li>
+                                       <li>EVA</li>
+                                       <li>火影忍者</li>
+                                       <li>哆唻A梦</li>
+                                   </ul>
+                               </div>
+                            </div>
+                            <div class="zwmain">
+                                <div class="zwmaintop">
+                                    <ul>
+                                        <strong style="margin-left:20px;margin-top:30px;">排序方式：</strong>
+                                        <li>按上架时间</li>
+                                        <li>价格由低到高</li>
+                                        <li>按更新时间</li>
+                                    </ul>
+                                </div>
+                                <div class="zwmain1">
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                </div>
+                                <div class="fenye1" id="div1"></div>
+                            </div>
+                       </div>
+           </div>
+  <div role="tabpanel" class="tab-pane" id="lift">
+                       <div class="zhenwen">
+                            <div class="zwtop">
+                               <div class="zwtitle">
+                                   <span>手办专区</span>
+                               </div>
+                               <div class="zwchoose">
+                                   
+                                       <strong style="float:left;margin-left:50px;margin-top:20px;">品牌：</strong>
+                                       <ul>
+                                       <li><span>全部</span></li>
+                                       <li>星球大战</li>
+                                       <li>高达</li>
+                                       <li>圣斗士星矢</li>
+                                       <li>Love Live</li>
+                                       <li>魔兽世界</li>
+                                       <li>七龙珠</li>
+                                       <li>银魂</li>
+                                       <li>复仇者联盟</li>
+                                       <li>漫威</li>
+                                       <li>超能陆战队</li>
+                                       <li>海贼王</li>
+                                       <li>钢铁侠</li>
+                                       <li>初音未来</li>
+                                       <li>出包女王</li>
+                                       <li>约会大作战</li>
+                                       <li>EVA</li>
+                                       <li>火影忍者</li>
+                                       <li>哆唻A梦</li>
+                                   </ul>
+                               </div>
+                            </div>
+                            <div class="zwmain">
+                                <div class="zwmaintop">
+                                    <ul>
+                                        <strong style="margin-left:20px;margin-top:30px;">排序方式：</strong>
+                                        <li>按上架时间</li>
+                                        <li>价格由低到高</li>
+                                        <li>按更新时间</li>
+                                    </ul>
+                                </div>
+                                <div class="zwmain1">
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                </div>
+                                <div class="fenye1" id="div1"></div>
+                            </div>
+                       </div>
+           </div>
+  <div role="tabpanel" class="tab-pane" id="maorong">
+                       <div class="zhenwen">
+                           <div class="zwtop">
+                               <div class="zwtitle">
+                                   <span>手办专区</span>
+                               </div>
+                               <div class="zwchoose">
+                                   
+                                       <strong style="float:left;margin-left:50px;margin-top:20px;">品牌：</strong>
+                                       <ul>
+                                       <li><span>全部</span></li>
+                                       <li>星球大战</li>
+                                       <li>高达</li>
+                                       <li>圣斗士星矢</li>
+                                       <li>Love Live</li>
+                                       <li>魔兽世界</li>
+                                       <li>七龙珠</li>
+                                       <li>银魂</li>
+                                       <li>复仇者联盟</li>
+                                       <li>漫威</li>
+                                       <li>超能陆战队</li>
+                                       <li>海贼王</li>
+                                       <li>钢铁侠</li>
+                                       <li>初音未来</li>
+                                       <li>出包女王</li>
+                                       <li>约会大作战</li>
+                                       <li>EVA</li>
+                                       <li>火影忍者</li>
+                                       <li>哆唻A梦</li>
+                                   </ul>
+                               </div>
+                            </div>
+                            <div class="zwmain">
+                                <div class="zwmaintop">
+                                    <ul>
+                                        <strong style="margin-left:20px;margin-top:30px;">排序方式：</strong>
+                                        <li>按上架时间</li>
+                                        <li>价格由低到高</li>
+                                        <li>按更新时间</li>
+                                    </ul>
+                                </div>
+                                <div class="zwmain1">
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                </div>
+                                <div class="fenye1" id="div1"></div>
+                            </div>
+                       </div>
+           </div>
+  <div role="tabpanel" class="tab-pane" id="guajian">
+                       <div class="zhenwen">
+                            <div class="zwtop">
+                               <div class="zwtitle">
+                                   <span>手办专区</span>
+                               </div>
+                               <div class="zwchoose">
+                                   
+                                       <strong style="float:left;margin-left:50px;margin-top:20px;">品牌：</strong>
+                                       <ul>
+                                       <li><span>全部</span></li>
+                                       <li>星球大战</li>
+                                       <li>高达</li>
+                                       <li>圣斗士星矢</li>
+                                       <li>Love Live</li>
+                                       <li>魔兽世界</li>
+                                       <li>七龙珠</li>
+                                       <li>银魂</li>
+                                       <li>复仇者联盟</li>
+                                       <li>漫威</li>
+                                       <li>超能陆战队</li>
+                                       <li>海贼王</li>
+                                       <li>钢铁侠</li>
+                                       <li>初音未来</li>
+                                       <li>出包女王</li>
+                                       <li>约会大作战</li>
+                                       <li>EVA</li>
+                                       <li>火影忍者</li>
+                                       <li>哆唻A梦</li>
+                                   </ul>
+                               </div>
+                            </div>
+                            <div class="zwmain">
+                                <div class="zwmaintop">
+                                    <ul>
+                                        <strong style="margin-left:20px;margin-top:30px;">排序方式：</strong>
+                                        <li>按上架时间</li>
+                                        <li>价格由低到高</li>
+                                        <li>按更新时间</li>
+                                    </ul>
+                                </div>
+                                <div class="zwmain1">
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                </div>
+                                <div class="fenye1" id="div1"></div>
+                            </div>
+                       </div>
+</div>
+  <div role="tabpanel" class="tab-pane" id="xiangbao">
+                       <div class="zhenwen">
+                            <div class="zwtop">
+                               <div class="zwtitle">
+                                   <span>手办专区</span>
+                               </div>
+                               <div class="zwchoose">
+                                   
+                                       <strong style="float:left;margin-left:50px;margin-top:20px;">品牌：</strong>
+                                       <ul>
+                                       <li><span>全部</span></li>
+                                       <li>星球大战</li>
+                                       <li>高达</li>
+                                       <li>圣斗士星矢</li>
+                                       <li>Love Live</li>
+                                       <li>魔兽世界</li>
+                                       <li>七龙珠</li>
+                                       <li>银魂</li>
+                                       <li>复仇者联盟</li>
+                                       <li>漫威</li>
+                                       <li>超能陆战队</li>
+                                       <li>海贼王</li>
+                                       <li>钢铁侠</li>
+                                       <li>初音未来</li>
+                                       <li>出包女王</li>
+                                       <li>约会大作战</li>
+                                       <li>EVA</li>
+                                       <li>火影忍者</li>
+                                       <li>哆唻A梦</li>
+                                   </ul>
+                               </div>
+                            </div>
+                            <div class="zwmain">
+                                <div class="zwmaintop">
+                                    <ul>
+                                        <strong style="margin-left:20px;margin-top:30px;">排序方式：</strong>
+                                        <li>按上架时间</li>
+                                        <li>价格由低到高</li>
+                                        <li>按更新时间</li>
+                                    </ul>
+                                </div>
+                                <div class="zwmain1">
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                </div>
+                                <div class="fenye1" id="div1"></div>
+                            </div>
+                       </div>
+           </div>
+  <div role="tabpanel" class="tab-pane" id="bukuan">
+                       <div class="zhenwen">
+                            <div class="zwtop">
+                               <div class="zwtitle">
+                                   <span>手办专区</span>
+                               </div>
+                               <div class="zwchoose">
+                                   
+                                       <strong style="float:left;margin-left:50px;margin-top:20px;">品牌：</strong>
+                                       <ul>
+                                       <li><span>全部</span></li>
+                                       <li>星球大战</li>
+                                       <li>高达</li>
+                                       <li>圣斗士星矢</li>
+                                       <li>Love Live</li>
+                                       <li>魔兽世界</li>
+                                       <li>七龙珠</li>
+                                       <li>银魂</li>
+                                       <li>复仇者联盟</li>
+                                       <li>漫威</li>
+                                       <li>超能陆战队</li>
+                                       <li>海贼王</li>
+                                       <li>钢铁侠</li>
+                                       <li>初音未来</li>
+                                       <li>出包女王</li>
+                                       <li>约会大作战</li>
+                                       <li>EVA</li>
+                                       <li>火影忍者</li>
+                                       <li>哆唻A梦</li>
+                                   </ul>
+                               </div>
+                            </div>
+                            <div class="zwmain">
+                                <div class="zwmaintop">
+                                    <ul>
+                                        <strong style="margin-left:20px;margin-top:30px;">排序方式：</strong>
+                                        <li>按上架时间</li>
+                                        <li>价格由低到高</li>
+                                        <li>按更新时间</li>
+                                    </ul>
+                                </div>
+                                <div class="zwmain1">
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                     <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                    <div class="img1">
+                                        <!--<img src="img\shoubam.jpg" alt="">-->
+                                    </div>
+                                </div>
+                                <div class="fenye1" id="div1"></div>
+                            </div>
+                       </div>
+           </div>
+  </div>
+ </div>
+{% endblock %}

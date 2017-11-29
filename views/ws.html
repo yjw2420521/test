@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/public/js/jquery.js"></script>
+    <script src="/public/bootstrap/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link href="/public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script  language="JavaScript" src="/public/js/index2.js"></script>
+    <script  language="JavaScript" src="/public/js/index.js"></script>
+    <script src="/public/bootstrap/js/bootstrap.min.js"></script> 
+  <title>Document</title>
+</head>
+<body>
+       <div class="headTag">
+        <div class="container container2">
+            <ul style="width:1190px;">
+                <li>
+                 <a href="/total">
+                     <button type="button" class="btn btn-warning" style=" opacity:0.9; border:0; margin-left:50px;margin-top:7px;margin-right:80px;"> 购物车</button>
+                </a>
+                </li>
+                <li style="margin-left:200px;margin-top:8px;">
+                    <img src="public/img\small_credit.png" alt="">
+                    <img src="public/img\small_mail.png" alt="">
+                    <img src="public/img\small_return.png" alt="">
+                   </li>
+                <li ><img src="public/img\header_arrow.png" alt=""></li>
+                <li></li>
+                <li style="padding-left:0px; padding-top:18px;padding-right:55px;">
+                    二 次 元 正 版 电 商，  购 有 爱！
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="head container">
+     <div class="top" style="width:1300px;">
+        <div class="logo" style="float:left;margin-left:80px;"><a href="/"><img src="public\img\LOGO.png" alt=""><a></div>
+          <div class="input-group" style="padding-top:20px;width:850px;">
+                <input type="text" class="form-control" placeholder="搜索你喜欢的商品.." style="width:400px; margin-left:100px;border-color:orange">
+                <span class="input-group-btn" style="float:left">
+                    <button class="btn btn-default" type="button" style="background:#ffad52; border-color:#ffad52;color:white">搜索</button>
+                </span>
+                <!--登录的模态-->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mysubmit" style="float:right;">注册</button>
+                {% if !userInfo._id %}
+                <button type="button" class="btn btn-primary"  id="denlu1" data-toggle="modal" data-target="#mymodal" style="float:right;margin-right:10px;">登录</button>
+                {% else %}
+                <button type="button" class="btn btn-primary" id="tuichu1"style="float:right;margin-right:10px;">退出</button>
+                <div style="margin-left:90px;float:left;margin-top:8px;">
+                <span>你好！</span><span id="gusername" style="font-size:12px;float:right;">{{userInfo.username}}</span>
+                </div>
+                {% endif %}
+                
+        </div><!-- /input-group -->
+        <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="mymodalLabel">
+            <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">用户登录</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group" style="width:50%">
+                <label>用户名:</label>
+                <input  name="username" type="text" class="form-control" placeholder="name">
+                <label>密码:</label>
+                <input name="password"  type="text" class="form-control" placeholder="座位号">
+                </div>
+            </div>
+            <div class="xianshi"></div>
+            <div class="modal-footer">
+            <button  type="button" class="btn btn-primary" style="margin-top:20px;">
+                    登录
+            </button>
+            </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <div class="modal fade" id="mysubmit" tabindex="-1" role="dialog" aria-labelledby="mymodalLabel">
+            <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">用户注册</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group" style="width:50%">
+                <label>用户名:</label>
+                <input name="username" type="text" class="form-control" placeholder="name">
+            
+                <label>密码:</label>
+                <input name="password" type="password" class="form-control" placeholder="座位号">
+                 
+                 <label>重复密码:</label>
+                <input name="repassword" type="password" class="form-control" placeholder="座位号">
+                
+                </div>
+            </div>
+            <div class="xianshi"></div>
+            <div class="modal-footer">
+                <button  type="button" class="btn btn-primary" style="margin-top:20px;" >
+                    立即注册
+                </button>
+            </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+     </div>
+     </div>
+      
+<ol class="breadcrumb" style="margin-left:100px;">
+  <li><a href="/">首页</a></li>
+  <li><a href="/gr">个人中心</a></li>
+  <li><span>完善信息</span></li>
+</ol>
+<div style="margin-left:110px">
+
+<h3> 商品管理 </h3> 
+    <div class="ws" >
+            <lable for="name">手机号</lable>
+            <input name="pnum" type="text" class="form-control" placeholder="name" style="width:800px">
+            <lable for="price">QQ号</lable>
+            <input name="qnum" type="text" class="form-control" placeholder="name" style="width:800px">
+            <lable for="num">邮箱</lable>
+            <input name="email" type="text" class="form-control" placeholder="name" style="width:800px">     
+    </div>
+    <button id="wsx" class="btn">提交</button>
+</div>
+<div class="bottum">
+        <div class="bottop">
+              <div class="bottopright">
+                <figure>
+                        
+                            <img src="\public\img\mobile_weixin.png" alt="谷歌的图片">
+                            <figcaption>
+                                <span style="margin:0 60px;font-size:10px">扫二维码</span>
+                            </figcaption>
+                            </figure>
+                <figure>
+                         
+                            <img src="\public\img\mobile_weixin.png" alt="谷歌的图片">
+                            <figcaption>
+                                <span style="margin:0 60px;font-size:10px">扫二维码</span>
+                            </figcaption>
+                            </figure>
+
+            </div>
+            <div class="bottopleft">
+                <div class="bottoplefttop">
+                     <img src="public\img\7tian.png" alt="">
+                     <img src="public\img\15tian.png" alt="">
+                     <img src="public\img\100.png" alt="" style="border:none;">
+                </div>
+                <div class="bottopleftbot">
+                      <ul>
+                          <li><strong>购物指南</strong></li>
+                          <li>购物常见问题</li>
+                          <li>订单状态</li>
+                          <li>购物流程</li>
+                      </ul>
+                      <ul>
+                          <li><strong>购物指南</strong></li>
+                          <li>购物常见问题</li>
+                          <li>订单状态</li>
+                          <li>购物流程</li>
+                      </ul>
+                      <ul>
+                          <li><strong>购物指南</strong></li>
+                          <li>购物常见问题</li>
+                          <li>订单状态</li>
+                          <li>购物流程</li>
+                      </ul>
+                      <ul>
+                          <li><strong>购物指南</strong></li>
+                          <li>购物常见问题</li>
+                          <li>订单状态</li>
+                          <li>购物流程</li>
+                      </ul>
+                      <div class="phone">
+                           <span class="glyphicon glyphicon-phone-alt">000-000000</span>
+                           <span style="background:green;float:none; color:white;padding:10px 20px;font-size:18px;border-radius:5px;">联系客服 QQ</span>
+                      </div>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+     <div class="word">
+         <span>免责条款 | 隐私保护 | 联系我们 | 加入我们 | 公司简介 | 媒体报道 </span></n>
+         <span>友情链接： 漫社区 | 有妖气 | 漫域 | 技术宅 | 78动漫 | 新浪动漫 | 快递查询 </span>
+         <span>© 2013-2016 北京海拓天行科技有限公司 manluotuo.com 保留一切权利. 京ICP备14003085</span>
+     </div>
+</body>
+
+</html>
+

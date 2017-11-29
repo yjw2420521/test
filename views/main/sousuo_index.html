@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% block main%} 
+
+<div class="sousuojieguo">
+{% for goods in goodsInfo%}
+<a href="/goods?gid={{goods.gid}}">
+<div class="img1"  style="margin:20px 20px;">
+    <div>
+        <span>{{message}}</span>
+        <img src="{{goods.img}}" alt="" style="padding:11px;">
+    </div>
+    <div><span style="font-size:15px;margin-left:20px;">商品名：</span><span>{{goods.name}}</span></div>
+    <div><span style="font-size:15px;margin-left:20px;">价格：</span><span>{{goods.price}}</span></div>
+</div>
+</a>
+{% endfor %}
+</div>
+
+
+{% endblock %}

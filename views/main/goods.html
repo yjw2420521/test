@@ -1,0 +1,364 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="/public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <script src="/public/js/jquery.js"></script>
+    <script src="/public/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/public/js/goods.js"></script>
+    <script src="/public/js/index.js"></script>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/public/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/jquery-picZoomer.css">
+    <style>
+            .content{
+                width: 1100px;
+                margin: 20px auto;
+                background-color: white;
+                margin-top:90px;
+                height:600px;
+            }
+            .comment{
+                width: 1100px;
+                margin: 20px auto;
+            }
+            .cview{
+                margin-top: 40px;
+            }
+            .spleft{
+                float: left;
+                width:650px;
+                border-right: 1px solid #f5f7fa;
+            }
+            .spleft img{
+                margin-left: 30px;  
+            }
+            .spright{
+                float: left;
+                width: 400px;
+                border-bottom: 1px solid #f5f7fa;
+                margin-left: 20px;
+                height: 200px;
+            }
+           .spright span{
+               position: relative;
+               font-size: 25px;
+               font-weight: bold ;
+               line-height:40px;
+               margin-top: 50px;
+               display: inline-block;
+           }
+           .sprightb{
+                float: left;
+                width: 400px;
+                height: 400px;
+           }
+           .xfbz{
+               height: 100px;
+               width: 1100px;
+               background-color: white;
+               margin-bottom: 10px;
+               margin-left: 120px;
+           }
+           .xfbz img{
+              height: 80px;
+              width: 250px;
+              padding-left: 10px;
+              padding-right: 20px;
+              border-right:  1px solid #f5f7fa;
+           }
+           .cview{
+               background-color: white;
+               padding-left: 50px;
+               padding-top:30px;
+               padding-bottom:30px;
+           }
+        </style>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/public/src/jquery.picZoomer.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.picZoomer').picZoomer();
+
+
+            //切换图片
+            $('.piclist li').on('click',function(event){
+                var $pic = $(this).find('img');
+                $('.picZoomer-pic').attr('src',$pic.attr('src'));
+            });
+        });
+    </script>
+</head>
+<body>
+     <div class="headTag">
+        <div class="container container2">
+            <ul style="width:1190px;">
+                <li>
+                 <a href="/total">
+                     <button type="button" class="btn btn-warning" style=" opacity:0.9; border:0; margin-left:50px;margin-top:7px;margin-right:80px;"> 购物车</button>
+                </a>
+                </li>
+                <li style="margin-left:200px;margin-top:8px;">
+                    <img src="public/img\small_credit.png" alt="">
+                    <img src="public/img\small_mail.png" alt="">
+                    <img src="public/img\small_return.png" alt="">
+                   </li>
+                <li ><img src="public/img\header_arrow.png" alt=""></li>
+                <li></li>
+                <li style="padding-left:0px; padding-top:18px;padding-right:55px;">
+                    二 次 元 正 版 电 商，  购 有 爱！
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="head container">
+     <div class="top" style="width:1300px;">
+        <div class="logo" style="float:left;margin-left:80px;"><a href="/"><img src="public\img\LOGO.png" alt=""></a></div>
+          <div class="input-group" style="padding-top:20px;width:850px;">
+                <input type="text" class="form-control" placeholder="搜索你喜欢的商品.." style="width:400px; margin-left:100px;border-color:orange">
+                <span class="input-group-btn" style="float:left">
+                    <button class="btn btn-default" type="button" style="background:#ffad52; border-color:#ffad52;color:white">搜索</button>
+                </span>
+                <!--登录的模态-->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mysubmit" style="float:right;">注册</button>
+                {% if !userInfo._id %}
+                <button type="button" class="btn btn-primary"  id="denlu1" data-toggle="modal" data-target="#mymodal" style="float:right;margin-right:10px;">登录</button>
+                {% else %}
+                <button type="button" class="btn btn-primary" id="tuichu1"style="float:right;margin-right:10px;">退出</button>
+                <div style="margin-left:90px;float:left;margin-top:8px;">
+                <span>你好！</span><span id="gusername" style="font-size:12px;float:right;">{{userInfo.username}}</span>
+                </div>
+                {% endif %}
+                
+        </div><!-- /input-group -->
+        <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="mymodalLabel">
+            <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">用户登录</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group" style="width:50%">
+                <label>用户名:</label>
+                <input  name="username" type="text" class="form-control" placeholder="name">
+                <label>密码:</label>
+                <input name="password"  type="text" class="form-control" placeholder="座位号">
+                </div>
+            </div>
+            <div class="xianshi"></div>
+            <div class="modal-footer">
+            <button  type="button" class="btn btn-primary" style="margin-top:20px;">
+                    登录
+            </button>
+            </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <div class="modal fade" id="mysubmit" tabindex="-1" role="dialog" aria-labelledby="mymodalLabel">
+            <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">用户注册</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group" style="width:50%">
+                <label>用户名:</label>
+                <input name="username" type="text" class="form-control" placeholder="name">
+            
+                <label>密码:</label>
+                <input name="password" type="password" class="form-control" placeholder="座位号">
+                 
+                 <label>重复密码:</label>
+                <input name="repassword" type="password" class="form-control" placeholder="座位号">
+                
+                </div>
+            </div>
+            <div class="xianshi"></div>
+            <div class="modal-footer">
+                <button  type="button" class="btn btn-primary" style="margin-top:20px;" >
+                    立即注册
+                </button>
+            </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+     </div>
+     </div>
+      <div class="nav" style="float:left;height:50px;margin-left:120px;width:1110px;">
+                    <ul class="nav2" style="float:left;height:50px;">
+                        <!--<li><a style="color:white; margin-left:30px;font-size: 16px;" href="">全部商品分类<span class="glyphicon glyphicon-chevron-down" style="padding-left:20px;"></span></a></li>-->
+                        <!--<strong>
+                        <li><a style="color:white" href="">商品</a></li>
+                        <li><a style="color:white" href="">限时特价</a></li>
+                        <li><a style="color:white" href="">新品预售</a></li>
+                        <li><a style="color:white" href="">品牌街</a></li>
+                        </strong>-->
+                    </ul>            
+      </div>
+    <div style="float:left;">
+        <span style="color:lightgray;margin-left: 120px; margin-top:5px; float:left">当前位置: 首页 > 新品预售 > 漫骆驼官方预定 少司命手办-《秦时明月》十周年纪念版手办 myethos 正版 预售【包邮】</span>
+    </div>
+
+        <div class="content" id="100">
+            <div class="spleft">
+                <div class="picZoomer" >
+            <img src="{{goodsInfo.img}}"  alt="">
+        </div>
+        <!--<img src="{{goodsInfo.img}}" alt="">-->
+        </div>
+
+       <div class="spright">  <span id="gname">{{goodsInfo.name}}</span></div>
+       <span id="gid" style="display:none">{{goodsInfo.gid}}</span>
+       <div class="sprightb">
+           <div style="margin-top:50px;margin-left:50px;  float: left;">
+           <span style="font-size:12px;color:lightgray;margin-bottom:20px;">预售定金:</span><span id="gprice" style="color:#ffad52;font-size:20px;">{{goodsInfo.price}}</span>   
+           </div>
+           <div style="margin-top:50px;margin-left:50px;  float: left;margin-bottom:20px;">
+           <span style="font-size:12px;color:lightgray">商品品牌:</span><span id="gprice" style="font-size:12px;color:lightgray">{{goodsInfo.price}}</span>   
+           </div>
+           <div style="margin-top:30px;margin-left:50px;  float: left;">
+           <span style="font-size:12px;color:lightgray">全款价格:</span><span id="gprice" style="color:lightgray;font-size:20px;">{{goodsInfo.price}}</span>   
+           </div>     
+           <div style="margin-top:30px;float: left;">
+           <span style="font-size:12px;color:lightgray; margin-left:50px;margin-top:30px;">商品数量:</span><span id="gprice" style="color:#ffad52;font-size:20px;">　{{goodsInfo.num}}</span>   
+           </div>           
+           <span id="gnum"></span>
+           <div class="gouwuche" style="margin-top:140px;margin-left:50px;  float: right;">
+                 <button class="btn btn-default" type="button" style="background:#ffad52; border-color:#ffad52;color:white">加入购物车</button>
+           </div>
+       </div>
+    </div>
+    <div class="xfbz">
+         <ul>
+              <li style="margin-left:50px;padding-top:8px;">
+                    <img src="public/img\small_credit.png" alt="">
+                    <img src="public/img\small_mail.png" alt="">
+                    <img src="public/img\small_return.png" alt="">
+              </li>
+         </ul>
+    </div>
+
+<div>
+<div style="margin-left:110px;">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist" style="background-color:white;width:1120px;">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" style="font-size:15px;">详细展示</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" style="font-size:15px;">用户评论</a></li>
+
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content" >
+    <div role="tabpanel" class="tab-pane active" id="home" style="float:left;background-color:white;width:1120px;"><div style="margin-top:30px;"><img src="{{goodsInfo.img1}}" alt=""><img src="{{goodsInfo.img2}}" alt=""></div></div>
+    <div role="tabpanel" class="tab-pane" id="profile" style="float:left;">
+         <div  class="comment">
+            <span >用户评论:</span><br>
+             <textarea class="form-control" rows="3"></textarea>
+                {% if !userInfo._id %}
+                <span style="color:red;">您还没有登录，请先登录</span>
+                {% else %}
+                <button type="button" class="btn btn-primary" id="tuichu1"style="margin-right:10px;margin-top:10px;">提交评论</button>
+                {% endif %}
+
+            {% for comment in commentInfo %}
+            <div class="cview">
+                   <span ><img src="\public\img\touxiang.jpg" alt="" style="border-radius:100px;width:50px;"></span><span style="margin-top:20px;margin-left:10px">{{comment.username}}</span>
+                   <p style="margin-top:10px;margin-left:100px;">{{comment.text}}</p>
+                   <p style="margin-right:5px;float:right;font-size:12px;color:lightgray;">时间：2017-5-20</p>
+            </div>
+            {% endfor %}
+        </div>
+     </div>
+    </div>
+  </div>
+
+</div>
+   
+ <div class="bottum">
+        <div class="bottop">
+              <div class="bottopright">
+                <figure>
+                        
+                            <img src="\public\img\mobile_weixin.png" alt="谷歌的图片">
+                            <figcaption>
+                                <span style="margin:0 60px;font-size:10px">扫二维码</span>
+                            </figcaption>
+                            </figure>
+                <figure>
+                         
+                            <img src="\public\img\mobile_weixin.png" alt="谷歌的图片">
+                            <figcaption>
+                                <span style="margin:0 60px;font-size:10px">扫二维码</span>
+                            </figcaption>
+                            </figure>
+
+            </div>
+            <div class="bottopleft">
+                <div class="bottoplefttop">
+                     <img src="public\img\7tian.png" alt="">
+                     <img src="public\img\15tian.png" alt="">
+                     <img src="public\img\100.png" alt="" style="border:none;">
+                </div>
+                <div class="bottopleftbot">
+                      <ul>
+                          <li><strong>购物指南</strong></li>
+                          <li>购物常见问题</li>
+                          <li>订单状态</li>
+                          <li>购物流程</li>
+                      </ul>
+                      <ul>
+                          <li><strong>购物指南</strong></li>
+                          <li>购物常见问题</li>
+                          <li>订单状态</li>
+                          <li>购物流程</li>
+                      </ul>
+                      <ul>
+                          <li><strong>购物指南</strong></li>
+                          <li>购物常见问题</li>
+                          <li>订单状态</li>
+                          <li>购物流程</li>
+                      </ul>
+                      <ul>
+                          <li><strong>购物指南</strong></li>
+                          <li>购物常见问题</li>
+                          <li>订单状态</li>
+                          <li>购物流程</li>
+                      </ul>
+                      <ul>
+                      <div class="phone" >
+                           <span class="glyphicon glyphicon-phone-alt" style="margin-top:-20px;">000-000000</span>
+                           <span style="display:block;margin-top:5px;background:green;color:white;padding:10px 20px;font-size:18px;border-radius:5px;">联系客服 QQ</span>
+                      </div>
+                      </ul>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+     <div class="word">
+         <span>免责条款 | 隐私保护 | 联系我们 | 加入我们 | 公司简介 | 媒体报道 </span></n>
+         <span>友情链接： 漫社区 | 有妖气 | 漫域 | 技术宅 | 78动漫 | 新浪动漫 | 快递查询 </span>
+         <span>© 2013-2016 北京海拓天行科技有限公司 manluotuo.com 保留一切权利. 京ICP备14003085</span>
+     </div>
+</body>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</html>

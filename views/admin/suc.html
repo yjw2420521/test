@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block main%} 
+<ol class="breadcrumb">
+  <li><a href="/">管理首页</a></li>
+  <li><span>成功提示</a></span></li>
+</ol>
+<div class="panel panel-default">
+  <div class="panel-heading">成功提示</div>
+  <div class="panel-body">
+       {{message}}
+  </div>
+  <div class="panel-footer">
+         <a  onclick="self.location=document.referrer;">返回上一级</a>
+  </div>
+</div>
+
+{% endblock %}

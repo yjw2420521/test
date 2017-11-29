@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block main%} 
+<ol class="breadcrumb">
+  <li><a href="/">管理首页</a></li>
+  <li><span>用户首页</a></span></li>
+</ol>
+
+<h3> 用户列表 </h3>
+<table class="table table-hover table-striped">
+    <tr>
+        <th>评论商品的id</th>
+        <th>商品名</th>
+        <th>用户名</th>
+        <th>内容</th>
+        <th>评论时间</th>
+        <th>操作</th>
+    </tr>
+    {% for comment in commentInfo %}
+    <tr>
+        <td>{{ comment.gid }}</td>
+        <td>{{ comment.name }}</td>
+        <td>{{ comment.username }}</td>
+        <td>{{ comment.text }}</td>
+        <td>{{ comment.commentTime }}</td>>
+        <td><a href="comment/del?id={{ comment._id.toString()}}">删除</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
